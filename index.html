@@ -8,7 +8,32 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
-
+<div id="blindSwiper">
+    <a data-wh="" data-num="0" class="blind-url" href="javascript:;"></a>
+    <div class="blind-pic"></div>
+    <div id="blind-control">
+        <div class="bot-box">
+            <div class="prev"><span></span></div>
+            <div class="next"><span></span></div>
+        </div>
+        <div class="dots-box"></div>
+    </div>
+</div>
 <script src="./src/js/blind.js"></script>
+<script>
+    window.onload = function() {
+        // 轮播的数据存放在一个多维数组内
+        // 如下所示数组的第一位是图片路径，第二位是图片的标题，第三位是图片的跳转链接
+
+        let blindArray = [
+            ['./src/images/1.jpg', '小行星', 'javascript:;'],
+            ['./src/images/2.jpg', '红枫叶', 'javascript:;'],
+            ['./src/images/3.jpg', '璀璨星空', 'javascript:;'],
+            ['./src/images/4.jpg', '回家', 'javascript:;'],
+            ['./src/images/5.jpg', '动物喝水', 'javascript:;'],
+            ['./src/images/6.jpg', '山清水秀', 'javascript:;']
+        ];
+    }
+</script>
 </body>
 </html>
