@@ -47,9 +47,9 @@ api  | 类型 | 默认值 | 备注
 autoPlay | boolean | true | 是否开启自动播放
 bladeNum |  number | 5 | 定义叶片的数量
 mouseUp |  boolean | false | 鼠标放置到案例上停止自动播放
-animationSpeed |  number | 500 | 图片滚动的速度
-bladeTime |  number | 100 | 每个叶片滚动的相隔时间
-animationTime |  number | 2000 | 每张图片切换的相隔时间
+animationSpeed |  number | 500 | 图片滚动的速度（毫秒）
+bladeTime |  number | 100 | 每个叶片滚动的相隔时间（毫秒）
+animationTime |  number | 2000 | 每张图片切换的相隔时间（毫秒）
 dots |  boolean | true | 是否显示控制器按钮
 
 
