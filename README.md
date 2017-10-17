@@ -54,4 +54,5 @@ dots |  boolean | true | 是否显示控制器按钮
 
 
 # 预览地址：
-暂未完成
+- http://zytao.cc/demo/blindScroll/
+- 2017.10.17 API所示功能均已经实现，后续会更新回调和调用
