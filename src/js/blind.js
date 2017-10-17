@@ -209,6 +209,11 @@ var blind = function (options) {
         }
     }
 
+    // 图片预加载
+    this.loadImagesFun = function(arr, fun) {
+
+    }
+
     this.init = function() {
         // 判断输入数组是否符合规范
         if(this.arr.length <= 2){
