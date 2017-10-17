@@ -63,4 +63,5 @@ dots |  boolean | true | 是否显示控制器按钮
 
 # 预览地址：
 - http://zytao.cc/demo/blindScroll/
+- 实际线上在使用的：http://www.yuangous.com/ (首页的效果，但实际和这个插件不一样，为早期版本)
 - 2017.10.17 API所示功能均已经实现，后续会更新回调，接口调用和图片预加载

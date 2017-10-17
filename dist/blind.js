@@ -14,7 +14,7 @@ var blind = function (options) {
     // 图片滚动的间隔时间
     this.animationTime = options.animationTime || 2000;
     // 是否显示控制器
-    this.dots = options.dots || true;
+    this.dots = options.dots && true;
     // 定义叶片的DOM结构
     this.blindEvent;
     // 重新更改this指针指向
@@ -152,7 +152,9 @@ var blind = function (options) {
 
     // 更新导航点
     this.dotsPosition = function(num) {
-        $('.dots-box').children('div').eq(num).addClass('active').siblings('div').removeClass('active');
+        if(this.dots){
+            $('.dots-box').children('div').eq(num).addClass('active').siblings('div').removeClass('active');
+        }   
     }
 
     // 计算轮播当前位置
@@ -207,10 +209,31 @@ var blind = function (options) {
         }
     }
 
+    // 图片预加载
+    this.loadImagesFun = function(arr, fun) {
+
+    }
+
     this.init = function() {
-        // 初始函数内应该判断两个东西
-        // 1、计算滚动时间和切换的时间是否冲突
-        // 2、检测arr函数是否符合标准
+        // 判断输入数组是否符合规范
+        if(this.arr.length <= 2){
+            console.log('数组长度不够，请确认后再次运行！');
+            return;
+        }
+        for(let i = 0; i < this.arr.length; i++){
+            if(this.arr[i][0] == ''){
+                console.log('数组第'+(i + 1)+'段有空白图片！');
+                return;
+            }
+            if(this.arr[i].length !== 3){
+                console.log('数组不符合规范，请检查后重试！');
+                return;
+            }
+        }
+        // 判断是否显示导航点和控制器
+        if(!this.dots){
+            $('#blind-control').remove();
+        }
         this.css();
         this.autoPlayFun();
         this.buttonClickFun();
