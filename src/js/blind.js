@@ -50,15 +50,6 @@ var blind = function (options) {
         this.setA(0);
     }
 
-    // 监听动画结束 - 辅助性函数
-    this.animateEnd = function (event, fun) {
-        function transitionSonEnd() {
-            fun();
-            event.off('transitionend',transitionSonEnd);
-        }
-        event.on('transitionend',transitionSonEnd);
-    }
-
     // 设置背景图片
     this.setBg = function(num) {
         for(let i = 0; i < this.bladeNum; i++) {
@@ -117,12 +108,6 @@ var blind = function (options) {
             blindPic.css('z-index', '1');
             than.blindEvent.css({'width': '0px'});
         }, lastTime);
-        // let lastNum = num;
-        // this.animateEnd(lastBlindPic, function() {
-        //     than.setA(lastNum);
-        //     blindPic.css('z-index', '1');
-        //     than.blindEvent.css({'width': '0px'});
-        // });
     }
 
     // 计算轮播当前位置
@@ -147,6 +132,9 @@ var blind = function (options) {
     }
 
     this.init = function() {
+        // 初始函数内应该判断两个东西
+        // 1、计算滚动时间和切换的时间是否冲突
+        // 2、检测arr函数是否符合标准
         this.css();
         this.autoPlayFun();
     }
