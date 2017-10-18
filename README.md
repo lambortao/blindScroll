@@ -1,6 +1,6 @@
 # blindScroll - 百叶窗轮播图
 
-### 项目需求，当时没有找到一模一样的效果，所以就自己写了一个，现在封装成一个插件
+### 原为项目需求，当时没有找到需求中的效果，所以就自己写了一个，现在封装成一个插件
 - 里面的动画大多是用CSS3写的，所以只兼容现代浏览器
 - 基于jQuery
 - 不要破坏下面的HTML结构，类名不可更改
@@ -26,7 +26,7 @@
 - 需要引入index.js和index.css
 - arr为必须项
 ```
-    new blind ({
+    let blindBox = new blind ({
         arr: blindArray
     });
 ```
@@ -59,9 +59,14 @@ bladeTime |  number | 100 | 每个叶片滚动的相隔时间（毫秒）
 animationTime |  number | 2000 | 每张图片切换的相隔时间（毫秒）
 dots |  boolean | true | 是否显示控制器按钮
 
+# 方法
+方法 | 类型 | 默认值 | 备注
+blindBox.next(); | / | / | 切换至下一张图片
+blindBox.prev(); | / | / | 切换至上一张图片
+blindBox.dots(num); | number | / | 切换至指定图片（下标从0开始）
 
 
 # 预览地址：
 - http://zytao.cc/demo/blindScroll/
-- 实际线上在使用的：http://www.yuangous.com/ (首页的效果，但实际和这个插件不一样，为早期版本)
+- 实际线上在使用的：http://www.yuangous.com/ （首页的效果，但实际和这个插件不一样，为早期版本）
 - 2017.10.17 API所示功能均已经实现，后续会更新回调，接口调用和图片预加载

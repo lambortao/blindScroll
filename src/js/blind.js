@@ -86,7 +86,7 @@ var blind = function (options) {
         });
     }
 
-    // 执行动画
+    // 执行切换图片的动画
     this.animationStart = function(num) {
         // 更改动画进行的阈值
         blindAnimation = true;
@@ -123,7 +123,7 @@ var blind = function (options) {
         }, lastTime);
     }
 
-    // 切换图片
+    // 手动切换图片
     this.switchBlade = function(bool) {
         if(!blindAnimation) {
             // 更改当前状态为手动操作
@@ -134,19 +134,32 @@ var blind = function (options) {
         }
     }
 
+    // 上一张
+    this.prev = function() {
+        than.switchBlade(false);
+    }
+    // 下一张
+    this.next = function() {
+        than.switchBlade(true);
+    }
+    // 任选一张
+    this.dots = function(num) {
+        than.switchBlade(num);
+    }
+
     // 按钮的控制
     this.buttonClickFun = function() {
         // 上一张
         $('#blindPrev').click(function() {
-            than.switchBlade(false);
+            than.prev();
         });
         // 下一张
         $('#blindNext').click(function() {
-            than.switchBlade(true);
+            than.next();
         });
         // 任选一张
         $('.dots-box').children('div').click(function() {
-            than.switchBlade($(this).data('num'));
+            than.dots($(this).data('num'));
         });
     }
 
