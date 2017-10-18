@@ -1,10 +1,12 @@
 # blindScroll - 百叶窗轮播图
 
-### 原为项目需求，当时没有找到需求中的效果，所以就自己写了一个，现在封装成一个插件
-- 里面的动画大多是用CSS3写的，所以只兼容现代浏览器
+### 简介
+<img src="./src/images/d.gif">
+
+- 里面的动画大多是用CSS3写的，所以只兼容chrome等现代浏览器
 - 基于jQuery
 - 不要破坏下面的HTML结构，类名不可更改
-  
+- 预览地址：http://zytao.cc/demo/blindScroll/
 
 
 ### html结构
@@ -76,10 +78,3 @@ blindBox.dots(num); | number | / | 切换至指定图片（下标从0开始）
         }
     });
 ```
-  
-  
-### 预览：
-- <img src="./src/images/d.gif">
-- http://zytao.cc/demo/blindScroll/
-- 实际线上在使用的：http://www.yuangous.com/ （首页的效果，但实际和这个插件不一样，为早期版本）
-- 2017.10.17 API所示功能均已经实现，后续会更新图片预加载
