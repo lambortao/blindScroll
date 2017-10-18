@@ -1,6 +1,6 @@
 # blindScroll - 百叶窗轮播图
 
-### 简介
+## 简介
 <img src="./src/images/d.gif">
 
 - 里面的动画大多是用CSS3写的，所以只兼容chrome等现代浏览器
@@ -9,7 +9,7 @@
 - 预览地址：http://zytao.cc/demo/blindScroll/
 
 
-### html结构
+## html结构
 ```
     <div id="blindSwiper">
         <a class="blind-url" href=""></a>
@@ -23,7 +23,7 @@
 ```
   
 
-### 用法
+## 用法
 - 需要引入index.js和index.css
 - arr为必须项
 ```
@@ -48,7 +48,7 @@
 ```
   
   
-### API
+## API
 api  | 类型 | 默认值 | 备注
 ---- | --- | --- | --- 
 autoPlay | boolean | true | 是否开启自动播放
@@ -61,7 +61,7 @@ dots |  boolean | true | 是否显示控制器按钮
   
   
   
-### 方法
+## 方法
 方法 | 类型 | 默认值 | 备注
 ---- | --- | --- | --- 
 blindBox.next(); | / | / | 切换至下一张图片
@@ -69,7 +69,7 @@ blindBox.prev(); | / | / | 切换至上一张图片
 blindBox.dots(num); | number | / | 切换至指定图片（下标从0开始）
   
   
-### 回调函数
+## 回调函数
 ```
     let blindBox = new blind ({
         arr: blindArray,
