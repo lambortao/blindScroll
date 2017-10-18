@@ -79,7 +79,7 @@ blindBox.dots(num); | number | / | 切换至指定图片（下标从0开始）
   
   
 ### 预览：
-<img src="./src/images/d.gif">
+- <img src="./src/images/d.gif">
 - http://zytao.cc/demo/blindScroll/
 - 实际线上在使用的：http://www.yuangous.com/ （首页的效果，但实际和这个插件不一样，为早期版本）
 - 2017.10.17 API所示功能均已经实现，后续会更新图片预加载
