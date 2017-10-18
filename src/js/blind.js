@@ -52,7 +52,7 @@ var blind = function (options) {
         this.setBlindWidth();
         this.resizeWindowsSize();
         this.setA(0);
-    }
+    };
 
     // 设置背景图片
     this.setBg = function(num) {
