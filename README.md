@@ -61,6 +61,7 @@ dots |  boolean | true | 是否显示控制器按钮
 
 # 方法
 方法 | 类型 | 默认值 | 备注
+---- | --- | --- | --- 
 blindBox.next(); | / | / | 切换至下一张图片
 blindBox.prev(); | / | / | 切换至上一张图片
 blindBox.dots(num); | number | / | 切换至指定图片（下标从0开始）
