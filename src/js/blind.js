@@ -59,13 +59,13 @@ var blind = function (options) {
         for(let i = 0; i < this.bladeNum; i++) {
             this.blindEvent.eq(i).children('div.blade-change').css('background-image', 'url('+ this.arr[num][0] +')');
         }
-    }
+    };
 
     // 设置顶部a标签的内容
     this.setA = function(num) {
         $('.blind-url').attr({'title': this.arr[num][1],'href': this.arr[num][2]});
         $('.blind-url').css('background-image', 'url('+ this.arr[num][0] +')');
-    }
+    };
 
     // 初始时和拖动窗口的时候设置单个叶片的宽度
     this.setBlindWidth = function() {
@@ -79,14 +79,14 @@ var blind = function (options) {
             this.blindEvent.eq(i).css({'left': ''+ (blindWidth * i) +'px'});
             this.blindEvent.children('div.blade-change:eq('+i+')').css('left', -(blindWidth * i) +'px');
         }
-    }
+    };
 
     // 改变窗口大小
     this.resizeWindowsSize = function() {
         $(window).resize(function() {
             than.setBlindWidth();
         });
-    }
+    };
 
     // 执行切换图片的动画
     this.animationStart = function(num) {
@@ -127,7 +127,7 @@ var blind = function (options) {
                 than.autoPlayFun();
             }
         }, lastTime);
-    }
+    };
 
     // 手动切换图片
     this.switchBlade = function(bool) {
@@ -138,20 +138,20 @@ var blind = function (options) {
             window.clearTimeout(clearGlobal);
             this.animationStart(than.countPosition(bool));
         }
-    }
+    };
 
     // 上一张
     this.prev = function() {
         than.switchBlade(false);
-    }
+    };
     // 下一张
     this.next = function() {
         than.switchBlade(true);
-    }
+    };
     // 任选一张
     this.dots = function(num) {
         than.switchBlade(num);
-    }
+    };
 
     // 按钮的控制
     this.buttonClickFun = function() {
@@ -167,14 +167,14 @@ var blind = function (options) {
         $('.dots-box').children('div').click(function() {
             than.dots($(this).data('num'));
         });
-    }
+    };
 
     // 更新导航点
     this.dotsPosition = function(num) {
         if(this.dots){
             $('.dots-box').children('div').eq(num).addClass('active').siblings('div').removeClass('active');
         }   
-    }
+    };
 
     // 计算轮播当前位置
     this.countPosition = function(e) {
@@ -198,7 +198,7 @@ var blind = function (options) {
             blindPosition = e;
         }
         return blindPosition;
-    }
+    };
     
     // 鼠标置入停止轮播
     this.mouseFun = function() {
@@ -213,7 +213,7 @@ var blind = function (options) {
                 }
             });
         }
-    }
+    };
 
     // 自动播放
     this.autoPlayFun = function() {
@@ -225,12 +225,12 @@ var blind = function (options) {
                 }, than.animationTime);
             })();
         }
-    }
+    };
 
     // 图片预加载
     this.loadImagesFun = function(arr, fun) {
 
-    }
+    };
 
     this.init = function() {
         // 判断输入数组是否符合规范
@@ -256,7 +256,7 @@ var blind = function (options) {
         this.autoPlayFun();
         this.buttonClickFun();
         this.mouseFun();
-    }
+    };
 
     this.init();
 }
