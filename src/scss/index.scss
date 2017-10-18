@@ -48,12 +48,12 @@
 
             &#blindPrev{
                 span{
-                    transform: rotate(-45deg);
+                    transform: translateX(3px) rotate(-45deg);
                 }
             }
             &#blindNext{
                 span{
-                    transform: rotate(135deg);
+                    transform: translateX(-3px) rotate(135deg);
                 }
             }
         }
