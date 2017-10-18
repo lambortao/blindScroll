@@ -35,11 +35,11 @@
 
         let blindBox = new blind ({
             arr: blindArray,
-            autoPlay: false,
-            animationTime: 3000,
-            bladeNum: 5,
-            callback: function() {
-                console.log();
+            autoPlay: true,
+            animationTime: 5000,
+            bladeNum: 20,
+            callback: function(num) {
+                console.log(num);
             }
         });
     }

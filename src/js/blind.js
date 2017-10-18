@@ -18,7 +18,7 @@ var blind = function (options) {
     // 定义叶片的DOM结构
     this.blindEvent;
     // 定义callback
-    this.callback = options.callback();
+    this.callback = options.callback || false;
     // 重新更改this指针指向
     let than = this;
     // 单个叶片的宽度定义
@@ -88,10 +88,6 @@ var blind = function (options) {
         });
     }
 
-    this.callback = function(num) {
-        return num;
-    }
-
     // 执行切换图片的动画
     this.animationStart = function(num) {
         // 更改动画进行的阈值
@@ -111,7 +107,9 @@ var blind = function (options) {
         }, 10);
         // 更新导航点
         this.dotsPosition(num);
-        this.callback(num);
+        if(this.callback){
+            this.callback(num);
+        }
         // 计算出最后最后一个动画结束的时间然后执行回掉函数
         let lastBlindPic = this.blindEvent.eq((this.bladeNum - 1));
         let lastTime = this.bladeTime * this.bladeNum + this.animationSpeed;
@@ -199,7 +197,6 @@ var blind = function (options) {
             // 如果传进来的是数字就直接返回数字
             blindPosition = e;
         }
-        
         return blindPosition;
     }
     
