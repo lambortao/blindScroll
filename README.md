@@ -1,6 +1,5 @@
 # blindScroll - 百叶窗轮播图
 
-## 简介
 <img src="./src/images/d.gif">
 
 - 里面的动画大多是用CSS3写的，所以只兼容chrome等现代浏览器
